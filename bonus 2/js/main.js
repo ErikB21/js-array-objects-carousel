@@ -68,24 +68,6 @@ arrowLeft.addEventListener('click', function(){
     left();
 });
 
-/*
-//prova bonus 2
-
-function slide(){
-    imgContainer.src = images[imageActive.url];
-    imageActive++;
-    if(imageActive >= images.length){
-        imageActive = 0;
-    }
-}
-
-setInterval(slide, 1000);
-
-
-*/
-
-
-
 
 function right(){
     imgContainer[imageActive].classList.remove('show');
@@ -121,6 +103,6 @@ function left(){
 
 
 
-
-const animationImage = setInterval(right, 1000);
+//bonus 2
+const animationImage = setInterval(right, 3000);
 console.log(animationImage);
