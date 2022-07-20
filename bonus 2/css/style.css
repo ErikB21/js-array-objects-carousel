@@ -48,6 +48,7 @@
     font-weight: bold;
     font-size: 3rem;
     margin: 20px 10px;
+    text-shadow: 2px 2px 5px #000;
 }
 
 #text-image p{
