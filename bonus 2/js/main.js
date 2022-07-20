@@ -36,19 +36,20 @@ const allCircleDom = document.querySelector('.allCircle');
 
 //grazie al ciclo for e all'implementazione tramite backtick
 // creiamo i contenitori oscurati nell HTML
-
-for (let i = 0; i < images.length; i++){
+//cambiato il ciclo for con il forEach
+images.forEach((image, index) =>{
     listDom.innerHTML +=    `<div class="imgContainer">
-                                <img class="image" src="${images[i].url}">
+                                <img class="image" src="${image.url}">
                                 <span id='text-image'>
-                                    <h2>${images[i].title}</h2>
-                                    <p>${images[i].description}</p>
+                                    <h1>${image.title}</h1>
+                                    <p>${image.description}</p>
                                 </span>
                             </div>`;
     allCircleDom.innerHTML += ` <div class="circle">
-                                    <img class="image2" src="${images[i].url}">
+                                    <img class="image2" src="${image.url}">
                                 </div>`;
-}
+});
+
 
 let imageActive = 0;
 const imgContainer = document.querySelectorAll('.imgContainer');
