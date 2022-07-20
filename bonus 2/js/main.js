@@ -61,15 +61,16 @@ circle[imageActive].classList.add('active');
 const arrowRight = document.querySelector('.arrow-right');
 const arrowLeft = document.querySelector('.arrow-left');
 
-arrowRight.addEventListener('click', function(){
-    right();
-});
+arrowRight.addEventListener('click',right);//senza parentesi per la devo richiamre e non invocare
 
-arrowLeft.addEventListener('click', function(){
-    left();
-});
+arrowLeft.addEventListener('click',left);
+
+//bonus 2
+const animationImage = setInterval(right, 3000);
 
 
+
+/////////FUNZIONI///////////
 function right(){
     imgContainer[imageActive].classList.remove('show');
     circle[imageActive].classList.remove('active');
@@ -104,6 +105,3 @@ function left(){
 
 
 
-//bonus 2
-const animationImage = setInterval(right, 3000);
-console.log(animationImage);
